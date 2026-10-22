@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* Ticket stub notch cutout effects */
+  .ticket-notch-left {
+    position: relative;
+  }
+  .ticket-notch-left::before {
+    content: '';
+    position: absolute;
+    left: -16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    background-color: #FAFAFC;
+    border-radius: 9999px;
+    box-shadow: inset -3px 0 6px rgba(0, 0, 0, 0.05);
+    z-index: 10;
+  }
+
+  .ticket-notch-right {
+    position: relative;
+  }
+  .ticket-notch-right::after {
+    content: '';
+    position: absolute;
+    right: -16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    background-color: #FAFAFC;
+    border-radius: 9999px;
+    box-shadow: inset 3px 0 6px rgba(0, 0, 0, 0.05);
+    z-index: 10;
+  }
+
+  /* Confetti pattern background */
+  .bg-confetti {
+    background-image: radial-gradient(#FFB800 1.5px, transparent 1.5px), radial-gradient(#FF5B37 1.5px, transparent 1.5px);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+    background-color: #FAFAFC;
+  }
+}
